@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e7f5e6; /* Verde claro */
+}
+
+.dark {
+    background-color: #2d3e2d; /* Verde escuro */
+    color: #f4f4f9;
+}
+
+h1, h2, p {
+    color: #3b523b; /* Verde escuro para texto */
+}
+
+.dark h1, .dark h2, .dark p {
+    color: #bcd4bb;
+}
+
+button {
+    transition: background-color 0.3s, color 0.3s;
+}
