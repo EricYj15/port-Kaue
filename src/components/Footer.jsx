@@ -1,15 +1,18 @@
-const Footer = () => (
-    <footer className="bg-green-800 text-white text-center p-6 mt-8 flex flex-col items-center">
-        <p>© 2024 Kauê Pires</p>
-        <p className="mt-2">
-            <a href="https://github.com/KAUE_GITHUB" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                GitHub
-            </a> |
-            <a href="https://linkedin.com/in/KAUE_LINKEDIN" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                LinkedIn
-            </a>
-        </p>
-    </footer>
-);
-
-export default Footer;
+const Footer = () => {
+    return (
+      <footer className="bg-blue-600 text-white text-center p-4 mt-auto">
+        <p>© 2024 Higor Kauan</p>
+        <div className="flex justify-center space-x-4 mt-2">
+          <a href="https://github.com/higor-kauan" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/higor-kauan" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            LinkedIn
+          </a>
+        </div>
+      </footer>
+    );
+  };
+  
+  export default Footer;
+  

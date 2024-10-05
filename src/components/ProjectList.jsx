@@ -1,23 +1,28 @@
 import { Link } from 'react-router-dom';
 
 const projects = [
-    { id: 1, title: 'App de Finanças', description: 'Aplicativo para controle financeiro pessoal.', technologies: ['React', 'Redux', 'Tailwind'] },
-    { id: 2, title: 'E-commerce', description: 'Plataforma de comércio eletrônico focada em pequenas empresas.', technologies: ['Next.js', 'Firebase'] },
+  { id: 1, title: 'Sistema de Gestão', description: 'Aplicação para gerenciamento de tarefas e projetos.' },
+  { id: 2, title: 'Aplicativo Mobile', description: 'Desenvolvimento de aplicativo mobile para controle financeiro.' },
 ];
 
-const ProjectList = () => (
-    <div className="flex flex-col items-center justify-center p-8 ml-56">
-        <h1 className="text-4xl font-bold mb-6 text-green-700">Projetos de Kauê</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {projects.map(project => (
-                <Link to={`/projects/${project.id}`} key={project.id} className="bg-white rounded-lg shadow-lg p-6 w-full max-w-xs">
-                    <h2 className="text-xl font-bold text-green-700">{project.title}</h2>
-                    <p className="text-gray-600 mt-2">{project.description}</p>
-                    <p className="text-sm text-green-500 mt-1">Tecnologias: {project.technologies.join(', ')}</p>
-                </Link>
-            ))}
-        </div>
-    </div>
-);
+const ProjectList = () => {
+  return (
+    <section className="p-8 bg-gray-50 min-h-screen">
+      <h2 className="text-3xl font-bold text-center mb-6">Meus Projetos</h2>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {projects.map((project) => (
+          <Link
+            key={project.id}
+            to={`/projects/${project.id}`}
+            className="bg-white shadow-lg p-6 rounded-md hover:bg-gray-100"
+          >
+            <h3 className="text-xl font-semibold text-blue-600">{project.title}</h3>
+            <p className="mt-2 text-gray-600">{project.description}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default ProjectList;

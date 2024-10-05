@@ -1,26 +1,26 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutMe from './components/AboutMe';
 import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
-import Menu from './components/Menu';
 import ProjectList from './components/ProjectList';
 import ProjectDetails from './pages/ProjectDetails';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
-const App = () => (
-  <Router>
-    <div className="flex flex-col min-h-screen">
-      <Menu />
-      <div className="flex-grow">
+const App = () => {
+  return (
+    <Router>
+      <div className="flex flex-col min-h-screen bg-gray-50">
+        <Menu />
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="/projects" element={<ProjectList />} />
-          <Route path="/contact" element={<ContactForm />} />
           <Route path="/projects/:id" element={<ProjectDetails />} />
+          <Route path="/contact" element={<ContactForm />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  </Router>
-);
+    </Router>
+  );
+};
 
 export default App;
